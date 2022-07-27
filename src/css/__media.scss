@@ -1,0 +1,14 @@
+@media (min-width: 768px) {
+  .navigation__auth,
+  .navigation__login,
+  .header__btn {
+    transition: all .3s ease 0s;
+  }
+  .navigation__auth:hover{
+    color: rgb(255, 231, 49);
+  }
+  .navigation__login:hover,
+  .header__btn:hover{
+    background: linear-gradient(129.54deg,#ff4040 95.03%, #ff1313 15.57% ), #FFFFFF;
+  }
+}

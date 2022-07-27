@@ -31,6 +31,11 @@ input::-ms-clear {
 }
 button {
   cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
 }
 button::-moz-focus-inner {
   padding: 0;
@@ -41,6 +46,10 @@ a,a:visited {
 }
 a:hover {
   text-decoration: none;
+}
+a {
+  font-weight: inherit;
+  color: inherit;
 }
 ul li {
   list-style: none;
