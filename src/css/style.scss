@@ -1,6 +1,7 @@
 @import './helpStyles/fonts';
 @import './helpStyles/reset';
 @import './helpStyles/variables';
+@import '../../node_modules/swiper/swiper-bundle.css';
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -12,10 +13,6 @@ body {
   max-width: $container-width;
   margin: 0 auto;
   padding: 0 $container-paddings;
-}
-
-.container-right {
-  padding-left: calc((100% - $container-width) / 2 + $container-paddings);
 }
 
 // header 
@@ -98,7 +95,9 @@ body {
 }
 
 .navigation__login:active,
-.header__btn:active{
+.button:active,
+.destination-slider.swiper-button-prev:active,
+.destination-slider.swiper-button-next:active {
    transform: scale(0.95);
 }
 
@@ -136,13 +135,15 @@ body {
   color: rgb(255, 255, 255, 0.5);
 }
 
-.header__btn {
+.button {
   display: inline-block;
-  padding: 26px 48px;
   background: $btn-color;
   border-radius: 27px;
   font-weight: 600;
   font-size: 25px;
+}
+.header__btn{
+  padding: 26px 48px;
 }
 
 .header__body-right{
@@ -155,6 +156,95 @@ body {
    top: -166px;
    width: 894px;
    height: 940px;
+}
+
+
+// destination
+.destination {
+  display: flex;
+  column-gap: 22px;
+  padding-right: $container-paddings;
+  padding-left: calc((100% - $container-width) / 2 + $container-paddings);
+  padding-top: 96px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+// title
+.destination__title {
+  min-width: 410px;
+}
+
+.destination__head {
+  padding-bottom: 15px;
+  font-weight: 600;
+  font-size: 55px;
+  line-height: 72px;
+}
+
+.destination__head_small {
+  font-size: 30px;
+}
+
+.destination__text {
+  padding-bottom: 60px;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 38px;
+  color: $secondary;
+}
+
+.destination__link {
+  padding: 24px 44px;
+  color: #FEFEFE;
+}
+
+// slider
+.destination-slider.swiper {
+  flex-shrink: 0;
+  width: 1182px;
+}
+
+.destination-slider .swiper-wrapper {
+  height: 456px; 
+  display: flex;
+  align-items: center;
+}
+
+.destination-slider.swiper-slide {
+  display: flex;
+  justify-content: center;
+  height: auto;
+  img {
+    width: 335px;
+    height: 402px;
+    object-fit: cover;   
+    border-radius: 35px;
+    transition: all .3s ease 0s;
+  }
+  &.swiper-slide-active{
+    img { 
+      width: 380px;
+      height: 456px;
+    }
+  }
+}
+
+.destination-slider .swiper-button-prev {  
+  left: 0;
+  padding: 24px;
+  background: $btn-color;
+  border-radius: 50%;
+}
+
+.destination-slider .swiper-button-prev::after {
+  content: "";
+  position: absolute;
+  width: 11px;
+  height: 14px;
+  background: url('../assets/images/slider/arrow-left.svg') no-repeat;
+  background-size: contain;
+  font-size: 0;
 }
 
 @import './_media'
