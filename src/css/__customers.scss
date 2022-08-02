@@ -1,0 +1,87 @@
+// customers 
+.customer {
+  padding: 100px 0 116.5px;
+  display: flex;
+  column-gap: 68px;
+}
+
+.customer__foto {
+  img {
+    width: 478px;
+    height: 537px;
+    object-fit: cover;
+    border-radius: 60px;
+  }
+}
+
+.customer__info {
+  max-width: 565px;
+}
+
+.customer__title {
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 68px;
+  margin-bottom: 35px;
+}
+
+.cutsomer__person {
+  display: flex;
+  align-items: center;
+  column-gap: 33px;
+  margin-bottom: 60px;
+}
+
+.customer__avatar {
+  width: 134px;
+  height: 134px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: $default-orange;
+  border-radius: 71.5px;
+  overflow: hidden;
+  img {
+    width: 124px;
+    height: 124px;
+    object-fit: cover;
+  }
+}
+
+.customer__name {
+  font-weight: 500;
+  font-size: 33px;
+  line-height: 40px;
+}
+
+.customer__name_small {
+  display: block;
+  margin-top: 10px;
+  font-weight: 400;
+  font-size: 25px;
+  color: $secondary;
+}
+
+.customer__comment {
+  max-width: 430px;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: $secondary;
+  margin-bottom: 30px;
+}
+
+.customer__rating {
+  display: flex;
+  column-gap: 10px;
+}
+
+.customer__rating-star{
+  svg {
+    width: 59px;
+    height: 59px;
+  }
+  &.--enabled svg path {
+    fill:#FFD336;
+  }
+}

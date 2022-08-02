@@ -23,3 +23,13 @@ const swiper = new Swiper('.destination-slider.swiper', {
     prevEl: '.destination-slider.swiper-button-prev',
   },
 })
+
+const customerRating = () => {
+  const customerValue = document.querySelector('.customer__rating').dataset.customerRating,
+    stars = document.querySelectorAll('.customer__rating-star')
+
+  return stars.forEach((element, index) => index < customerValue
+    ? element.classList.add('--enabled')
+    : element.classList.remove('--enabled'))
+}
+customerRating()
