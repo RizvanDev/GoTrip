@@ -1,20 +1,20 @@
-// header 
+// header
 .header {
   position: relative;
   min-height: 940px;
   padding-top: 44px;
-  background: linear-gradient(132.05deg, #428E5F -17.38%, #112120 78.4%), #204434;
+  background: linear-gradient(132.05deg, #428e5f -17.38%, #112120 78.4%), #204434;
   color: #fff;
   overflow: hidden;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 96px;
-    background: url('../assets/images/header/triangle.svg') no-repeat;
+    background: url("../assets/images/header/triangle.svg") no-repeat;
     background-size: 100%;
   }
 }
@@ -51,14 +51,14 @@
 
   &.--active-link::after,
   &:hover::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -6px;
     left: 0;
     display: block;
     width: 80%;
     height: 4px;
-    background-color: #C4C4C4;
+    background-color: #c4c4c4;
     border-radius: 100px;
   }
 }

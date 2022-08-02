@@ -1,12 +1,12 @@
-@import './helpStyles/fonts';
-@import './helpStyles/reset';
-@import './helpStyles/variables';
-@import '../../node_modules/swiper/swiper-bundle.css';
+@import "./helpStyles/fonts";
+@import "./helpStyles/reset";
+@import "./helpStyles/variables";
+@import "../../node_modules/swiper/swiper-bundle.css";
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #f6f6f6;
-    color: #0f1f1c;
+  font-family: "Poppins", sans-serif;
+  background-color: #f6f6f6;
+  color: #0f1f1c;
 }
 
 .container {
@@ -15,8 +15,9 @@ body {
   padding: 0 $container-paddings;
 }
 
-@import './_header';
-@import './_destination';
-@import './_customers';
+@import "./_header";
+@import "./_destination";
+@import "./_customers";
+@import "./_discount";
 
-@import './_media'
+@import "./_media";

@@ -35,7 +35,7 @@
 
 .destination__link {
   padding: 24px 44px;
-  color: #FEFEFE;
+  color: #fefefe;
 }
 
 // slider
@@ -60,7 +60,7 @@
     height: 402px;
     object-fit: cover;
     border-radius: 35px;
-    transition: all .3s ease 0s;
+    transition: all 0.3s ease 0s;
   }
 
   &.swiper-slide-active {
@@ -83,7 +83,7 @@
   position: absolute;
   width: 11px;
   height: 14px;
-  background: url('../assets/images/slider/arrow-left.svg') no-repeat;
+  background: url("../assets/images/slider/arrow-left.svg") no-repeat;
   background-size: contain;
   font-size: 0;
 }

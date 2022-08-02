@@ -1,0 +1,49 @@
+// discount
+.discount {
+  position: relative;
+  margin-top: 116.5px;
+  padding: 116px 0 115px;
+  background-color: #fff;
+  border-radius: 60px;
+  text-align: center;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 63px;
+    height: 83px;
+  }
+  &::after {
+    bottom: 56px;
+    left: 74px;
+    background: url("../assets/images/cta/cta-el-01.svg") no-repeat;
+    background-size: cover;
+  }
+  &::before {
+    top: 74px;
+    right: 80px;
+    background: url("../assets/images/cta/cta-el-02.svg") no-repeat;
+    background-size: cover;
+  }
+}
+
+.discount__title {
+  max-width: 519px;
+  margin: 0 auto 30px;
+  font-weight: 500;
+  font-size: 45px;
+  line-height: 68px;
+}
+
+.discount__string {
+  margin-bottom: 60px;
+  font-size: 30px;
+  color: $secondary;
+}
+
+.discount__link {
+  padding: 24px 54px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #fff;
+}

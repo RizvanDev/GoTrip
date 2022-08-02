@@ -1,6 +1,7 @@
-// customers 
+// customers
 .customer {
-  padding: 100px 0 116.5px;
+  padding-top: 100px;
+  padding-bottom: 116.5px;
   display: flex;
   column-gap: 68px;
 }
@@ -76,12 +77,12 @@
   column-gap: 10px;
 }
 
-.customer__rating-star{
+.customer__rating-star {
   svg {
     width: 59px;
     height: 59px;
   }
   &.--enabled svg path {
-    fill:#FFD336;
+    fill: #ffd336;
   }
 }
