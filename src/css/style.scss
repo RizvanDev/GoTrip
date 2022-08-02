@@ -15,10 +15,11 @@ body {
   padding: 0 $container-paddings;
 }
 
-@import "./_header";
-@import "./_destination";
-@import "./_customers";
-@import "./_discount";
-@import "./_subscribe";
+@import "./header";
+@import "./destination";
+@import "./customers";
+@import "./discount";
+@import "./subscribe";
+@import "./footer";
 
-@import "./_media";
+@import "./media";

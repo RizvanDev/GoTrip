@@ -1,4 +1,4 @@
-@media (min-width: 768px) {
+@media (min-width: 1000px) {
   .navigation__auth,
   .navigation__login,
   .button {
@@ -7,8 +7,35 @@
   .navigation__auth:hover {
     color: rgb(255, 231, 49);
   }
+  .footer .navigation__auth:hover {
+    color: #ff7c4e;
+    text-shadow: 0 0 0 #666;
+  }
   .navigation__login:hover,
   .button:hover {
     background: linear-gradient(129.54deg, #ff4040 95.03%, #ff1313 15.57%), #ffffff;
+  }
+  .navigation__link {
+    position: relative;
+    &:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      display: block;
+      width: 80%;
+      height: 4px;
+      background-color: #c4c4c4;
+      border-radius: 100px;
+    }
+  }
+  .footer .navigation__link {
+    &:hover {
+      color: #ff7c4e;
+      text-shadow: 0 0 0 #666;
+    }
+    &:hover::after {
+      display: none;
+    }
   }
 }

@@ -48,9 +48,7 @@
 
 .navigation__link {
   position: relative;
-
-  &.--active-link::after,
-  &:hover::after {
+  &.--active-link::after {
     content: "";
     position: absolute;
     bottom: -6px;
@@ -81,8 +79,7 @@
 
 .navigation__login:active,
 .button:active,
-.destination-slider.swiper-button-prev:active,
-.destination-slider.swiper-button-next:active {
+.destination-slider.swiper-button-prev:active {
   transform: scale(0.95);
 }
 

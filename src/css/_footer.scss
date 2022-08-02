@@ -1,0 +1,28 @@
+// footer
+.footer {
+  padding: 53px 0 74px;
+  color: $secondary;
+}
+
+.footer .navigation__logo {
+  color: #ff7c4e;
+}
+
+.footer .navigation__link {
+  position: relative;
+  &.--active-link {
+    color: #ff7c4e;
+  }
+  &.--active-link::after {
+    width: 0;
+    height: 0;
+  }
+}
+
+.footer .navigation__btns {
+  column-gap: 66px;
+}
+
+.footer .navigation__login {
+  color: #fff;
+}
