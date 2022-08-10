@@ -12,7 +12,8 @@
     text-shadow: 0 0 0 #666;
   }
   .navigation__login:hover,
-  .button:hover {
+  .button:hover,
+  .modal-login__btn:hover {
     background: linear-gradient(129.54deg, #ff4040 95.03%, #ff1313 15.57%), #ffffff;
   }
   .navigation__link {
@@ -776,10 +777,38 @@
     padding: 18px 40px;
     font-size: 18px;
   }
+
+  // login modal
+  .modal-login__form {
+    input {
+      width: auto;
+    }
+  }
 }
 @media (max-width: 375px) {
   .header__body_img {
     width: 320px;
     height: 390px;
+  }
+
+  .modal-login__container {
+    padding: 16px;
+    border-radius: 25px;
+  }
+  .modal-login__title {
+    margin-bottom: 35px;
+    font-size: 22px;
+    letter-spacing: 0.2px;
+  }
+  .modal-login__form {
+    row-gap: 15px;
+    input {
+      padding: 20px;
+      font-size: 16px;
+    }
+  }
+  .modal-login__btn {
+    padding: 14px 40px;
+    font-size: 16px;
   }
 }

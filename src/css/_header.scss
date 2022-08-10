@@ -80,7 +80,8 @@
 
 .navigation__login:active,
 .button:active,
-.destination-slider.swiper-button-prev:active {
+.destination-slider.swiper-button-prev:active,
+.modal-login__btn:active {
   transform: scale(0.95);
 }
 

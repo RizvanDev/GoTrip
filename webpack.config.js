@@ -1,15 +1,18 @@
 const path = require("path");
 
+// mode type
 const mode = process.env.NODE_ENV || 'development',
   devMode = mode === 'development',
   target = devMode ? 'web' : 'browserslist',
   devtool = devMode ? 'source-map' : undefined
 
+// plugins
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
   MiniCssExtractPlugin = require("mini-css-extract-plugin"),
   CssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
   TerserPlugin = require('terser-webpack-plugin')
 
+// optimization func
 const optimization = () => {
   return {
     minimize: true,
@@ -20,13 +23,17 @@ const optimization = () => {
 
 module.exports = {
   mode, target, devtool,
+
   entry: ['@babel/polyfill', path.resolve(__dirname, 'src/scripts', 'index.js')],
+
   output: {
     path: path.resolve(__dirname, 'dist'),
     clean: true,
     filename: '[name].[contenthash].js',
   },
+
   plugins: [
+
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
       filename: 'index.html',
@@ -34,17 +41,23 @@ module.exports = {
         collapseWhitespace: !devMode
       }
     }),
+
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     })
+
   ],
+
   optimization: !devMode ? optimization() : undefined,
+
   module: {
     rules: [
+      // html
       {
         test: /\.html$/i,
         loader: 'html-loader',
       },
+      // styles
       {
         test: /\.(c|sa|sc)ss$/i,
         use: [
@@ -61,6 +74,7 @@ module.exports = {
           'sass-loader',
         ],
       },
+      // images
       {
         test: /\.(png|svg|jpg|jpeg|gif|ico)$/i,
         type: 'asset/resource',
@@ -92,6 +106,7 @@ module.exports = {
           filename: 'assets/images/[name][ext]'
         }
       },
+      // fonts
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
@@ -99,6 +114,7 @@ module.exports = {
           filename: 'assets/fonts/[name][ext]'
         }
       },
+      // babel js
       {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,

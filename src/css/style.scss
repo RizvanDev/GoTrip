@@ -3,6 +3,24 @@
 @import "./helpStyles/variables";
 @import "../../node_modules/swiper/swiper-bundle.css";
 
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ff7b4e #f6f6f6;
+}
+
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #ff7b4e #f6f6f6;
+  &::-webkit-scrollbar {
+    width: 8px;
+    background-color: #f6f6f6;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ff7b4e;
+    border-radius: 20px;
+  }
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f6f6f6;
@@ -24,5 +42,6 @@ body {
 @import "./discount";
 @import "./subscribe";
 @import "./footer";
+@import "./modal";
 
 @import "./media";
