@@ -6,7 +6,17 @@ const mode = process.env.NODE_ENV || 'development',
   devtool = devMode ? 'source-map' : undefined
 
 const HtmlWebpackPlugin = require('html-webpack-plugin'),
-  MiniCssExtractPlugin = require("mini-css-extract-plugin")
+  MiniCssExtractPlugin = require("mini-css-extract-plugin"),
+  CssMinimizerPlugin = require('css-minimizer-webpack-plugin'),
+  TerserPlugin = require('terser-webpack-plugin')
+
+const optimization = () => {
+  return {
+    minimize: true,
+    minimizer: [new CssMinimizerPlugin(), new TerserPlugin()],
+  }
+}
+
 
 module.exports = {
   mode, target, devtool,
@@ -19,12 +29,16 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, './src/index.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      minify: {
+        collapseWhitespace: !devMode
+      }
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[contenthash].css'
     })
   ],
+  optimization: !devMode ? optimization() : undefined,
   module: {
     rules: [
       {
